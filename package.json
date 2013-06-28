@@ -1,0 +1,19 @@
+{
+  "name": "hubot-mineflayer",
+  "version": "0.1.0",
+  "description": "Hubot Adapter for the Mineflayer API",
+  "main": "src/index.coffee",
+  "repository": "",
+  "keywords": [
+    "hubot",
+    "minecraft",
+    "mineflayer"
+  ],
+  "author": "Eli Perelman",
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "",
+    "mineflayer": "~0.1.1",
+    "hubot": "~2.5.5"
+  }
+}
