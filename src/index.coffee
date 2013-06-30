@@ -11,8 +11,6 @@ class MineflayerAdapter extends hubot.Adapter
 			@bot.whisper username, message unless username is @bot.username
 
 	run: ->
-		self = @
-
 		@bot = mineflayer.createBot
 			host: process.env.HUBOT_MINECRAFT_HOST
 			port: +process.env.HUBOT_MINECRAFT_PORT
@@ -31,12 +29,8 @@ class MineflayerAdapter extends hubot.Adapter
 			textMessage = new hubot.TextMessage user, message, 'messageId'
 			@receive textMessage
 
-		@bot.on 'whisper', (username, message) =>
-			user = new hubot.User username
-			textMessage = new hubot.TextMessage user, message, 'messageId'
-			@receive textMessage
-
-		@emit 'connected'
+			@robot.bot = @bot
+			@emit 'connected'
 
 exports.use = (robot) ->
 	new MineflayerAdapter robot
